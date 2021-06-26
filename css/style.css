@@ -56,6 +56,29 @@ body{
         font-size: 48px;
         color: var(--heading-color);
     }
+
+    /* ##### Hero section ###### */
+    .hero-section{
+        margin-top: 50px;
+    }
+
+    /* Sub heading */
+    #sub-heading{
+        font-size: 18px;
+        color: var(--button-color);
+        letter-spacing: 10px;
+        font-weight: bold;
+    }
+
+    /* heading */
+    #heading{
+        font-weight: bold;
+        line-height: 55px;
+        color: var(--heading-color);
+        font-size: 48px;
+    }
+
+    
 }
 
 /* Tablet */
