@@ -14,6 +14,7 @@
     --button-color: #496CD8;
     --heading-color: #5CE1E4;
     --primary-radius: 20px;
+    --text-color: #766D85;
 }
 
 /* Body */
@@ -78,7 +79,13 @@ body{
         font-size: 48px;
     }
 
-    
+    /* Paragraph */
+    #paragraph{
+        margin-top: 30px;
+        font-size: 24px;
+        color: var(--text-color);
+        line-height: 30px;
+    }
 }
 
 /* Tablet */
