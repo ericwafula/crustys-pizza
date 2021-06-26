@@ -118,6 +118,11 @@ body{
     .icon{
         color: var(--button-color);
     }
+
+    /* hides the svg */
+    .right-column{
+        display: none;
+    }
 }
 
 /* Tablet */
@@ -141,6 +146,29 @@ body{
         font-size: 96px;
     }
 
+    /* ##### HERO SECTION ##### */
+    .hero-section{
+        margin-top: 100px;
+    }
+
+    /* sub-heading */
+    #sub-heading{
+        font-size: 32px; 
+    }
+
+    /* paragraph */
+    #paragraph{
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    /* button */
+    .get-started-btn{
+        width: 100%;
+
+    }
+
+    /*  */
 }
 
 /* Desktop */
@@ -210,7 +238,7 @@ body{
     /* icons */
     .icons{
         display: flex;
-        gap: 20px;
+        gap: 10px;
     }
 
     .icon{
@@ -227,4 +255,32 @@ body{
     .icon:hover{
         border: var(--heading-color) solid 3px;
     }
+
+    /* ##### HERO SECTION ##### */
+    .hero-section{
+        margin-top: 100px;
+        align-items: center;
+    }
+
+    /* Right column */
+    .right-column{
+        background-color: var(--illustration-container-color);
+        width: 500px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+    }
+
+    .right-column > img{
+        width: 500px;
+        height: 400px;
+    }
+
+    .hero-inner{
+        gap: 80px;
+        align-items: center;
+    }
+
 }
