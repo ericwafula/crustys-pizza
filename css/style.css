@@ -133,7 +133,17 @@ body{
     }
 
     /* icons */
+    .icons{
+        display: flex;
+        gap: 20px;
+    }
+
     .icon{
-        
+        height: 50px;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
     }
 }
