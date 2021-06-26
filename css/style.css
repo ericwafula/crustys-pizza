@@ -13,7 +13,7 @@
     --illustration-container-color: #D6B6A1;
     --button-color: #496CD8;
     --heading-color: #5CE1E4;
-
+    --primary-radius: 20px;
 }
 
 /* Body */
@@ -123,5 +123,12 @@ body{
     }
 
     /* button */
-    
+    .get-started-btn{
+        background-color: var(--button-color);
+        width: 100%;
+        height: 50px;
+        border-radius: var(--primary-radius);
+        font-size: 18px;
+        font-weight: bold;
+    }
 }
