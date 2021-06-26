@@ -1,0 +1,124 @@
+/* resets styles */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Default styles */
+:root{
+    --padding-left-right: 170px;
+    --background-color: #FFF3C2;
+    --illustration-container-color: #D6B6A1;
+    --button-color: #496CD8;
+    --heading-color: #5CE1E4;
+
+}
+
+/* Body */
+body{
+    background-color: var(--background-color);
+}
+
+/* #### Media Queries #### */
+/* Phone */
+@media screen and (min-width: 350px){
+    /* Body */
+    body{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Logo */
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Nav Menu */
+    .nav-menu{
+        padding-top: 20px;
+    }
+
+    /* navbar */
+    .nav{
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .menu{
+        display: none;
+    }
+
+    /* Hamburger Icon */
+    .fa-bars{
+        display: block;
+        font-size: 48px;
+        color: var(--heading-color);
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 700px){
+    /* Body */
+    body{
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+    }
+
+    /* Logo */
+    #logo{
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Hamburger Icon */
+    .fa-bars{
+        display: block;
+        font-size: 96px;
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1100px){
+    /* Body */
+    body{
+        padding-left: var(--padding-left-right);
+        padding-right: var(--padding-left-right);
+    }
+
+    /* Logo */
+    #logo{
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Hamburger Icon */
+    .fa-bars{
+        display: none;
+    }
+    /* Menu list */
+    .menu{
+        display: block;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--heading-color);
+    }
+
+    /* Hover */
+    .menu li{
+        cursor: pointer;
+    }
+
+    .menu li:hover{
+        border-bottom: solid var(--heading-color) 3px;
+    }
+}
