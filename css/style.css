@@ -61,6 +61,7 @@ body{
     /* ##### Hero section ###### */
     .hero-section{
         margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     /* Sub heading */
@@ -259,6 +260,7 @@ body{
     /* ##### HERO SECTION ##### */
     .hero-section{
         margin-top: 100px;
+        margin-bottom: 100px;
         align-items: center;
     }
 
