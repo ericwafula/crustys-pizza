@@ -145,5 +145,6 @@ body{
         align-items: center;
         justify-content: center;
         width: 70px;
+        background-color: var(--button-color);
     }
 }
