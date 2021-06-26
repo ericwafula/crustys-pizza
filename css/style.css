@@ -134,6 +134,17 @@ body{
         border: none;
     }
 
+    /* Button hover */
+    .get-started-btn:hover{
+        background-color: var(--button-color);
+    }
+
+    .get-started-btn:focus{
+        background-color: var(--heading-color);
+        color: var(--button-color);
+        box-shadow: none;
+    }
+
     /* icons */
     .icons{
         display: flex;
