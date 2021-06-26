@@ -96,7 +96,7 @@ body{
     }
 
     /* Hamburger Icon */
-    .fa-bars{
+    #hamburger-icon{
         display: none;
     }
     /* Menu list */
