@@ -147,4 +147,9 @@ body{
         width: 70px;
         background-color: var(--button-color);
     }
+
+    /* Icon hover */
+    .icon:hover{
+        border: var(--heading-color) solid 3px;
+    }
 }
