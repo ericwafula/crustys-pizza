@@ -121,4 +121,7 @@ body{
     .menu li:hover{
         border-bottom: solid var(--heading-color) 3px;
     }
+
+    /* button */
+    
 }
