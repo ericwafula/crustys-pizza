@@ -403,4 +403,12 @@ body{
     #pizza-name{
         color: var(--text-color);
     }
+
+    #initial-price-pre-text{
+        color: black;
+    }
+
+    #initial-price-text{
+        color: var(--button-color);
+    }
 }
