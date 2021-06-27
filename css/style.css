@@ -352,4 +352,10 @@ body{
         width: 100%;
         border-radius: 20px;
     }
+
+    /* Pizza second row */
+    .pizza-second-row{
+        margin-top: 70px;
+        margin-bottom: 200px;
+    }
 }
