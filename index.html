@@ -76,11 +76,49 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <div class="row">
-                                    <div class="col-12- col-md-4">
+                                <div class="modal-header-container">
+                                    <!-- pizza -->
+                                    <div class="col-12 col-md-4">
                                         <img src="./images/Pizza Image.png" alt="Pizza">
                                     </div>
+                                    <!-- buttons -->
+                                    <div class="col-12 col-md-8 modal-header-buttons">
+                                        <!-- Radio -->
+                                        <form action="#" id="radio-form">
+                                            <div class="radio form-group">
+                                                <label>
+                                                    Small
+                                                    <input class="form-control" type="radio" name="size" value="small" checked>
+                                                </label>
+                                            </div>
+                                            <div class="radio form-group">
+                                                <label>
+                                                    Medium
+                                                    <input class="form-control" type="radio" name="size" value="medium">
+                                                </label>
+                                            </div>
+                                            <div class="radio form-group">
+                                                <label>
+                                                    Large
+                                                    <input class="form-control" type="radio" name="size" value="large">
+                                                </label>
+                                            </div>
+
+                                            <div class="radio form-group">
+                                                <label>
+                                                    Select Crust
+                                                    <select name="select-crust" id="select-crust" class="form-control">
+                                                        <option value="cryspy">Cryspy</option>
+                                                        <option value="stuffed">Stuffed</option>
+                                                        <option value="gluten-free">Gluten-free</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </form>
+
+                                    </div>
                                 </div>
+
                             </div>
                             <div class="modal-body">
                                 <h1>body</h1>
@@ -158,6 +196,8 @@
                 </div>
             </div>
         </div>
+
     </div>
+
 </body>
 </html>

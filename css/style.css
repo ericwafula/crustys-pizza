@@ -266,7 +266,7 @@ body{
     /* ##### HERO SECTION ##### */
     .hero-section{
         margin-top: 100px;
-        margin-bottom: 100px;
+        margin-bottom: 200px;
         align-items: center;
     }
 
@@ -360,7 +360,7 @@ body{
         /* scroll-behavior: smooth; */
     }
 
-    /* modal */
+    /* #### MODAL #### */
     .modal-header{
         border: none;
     }
@@ -376,5 +376,26 @@ body{
     .modal-content{
         border-radius: 40px;
         padding: 40px;
+    }
+
+    /* header */
+    .modal-header-container{
+        display: flex;
+        align-items: row;
+        gap: 20px;
+    }
+
+    /* radio button group */
+    .radio{
+        display: inline-flex;
+    }
+
+    #radio-form{
+        display: flex;
+        gap: 40px;
+    }
+
+    #select-crust{
+        border-radius: 20px;
     }
 }
