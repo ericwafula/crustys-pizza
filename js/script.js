@@ -1,12 +1,5 @@
 // Business Logic
-// var radioSelect = function(value){
-//     return value;
-// };
 
-// var calculateOnSize= function(value){
-//     value = radioSelect();
-//     alert(value);
-// }
 
 
 
@@ -50,7 +43,17 @@ $(document).ready(function(){
 
     var orderType = $("#order-type").val();
 
-    
+    var firstName = $("#first-name").val();
+
+    var lastName = $("#last-name").val();
+
+    var emailAddress = $("#email-address").val();
+
+    var phoneNumber = $("#phone").val();
+
+    var county = $("#county").val();
+
+    var address = $("#address").val();
 
 
 });

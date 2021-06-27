@@ -448,5 +448,12 @@ body{
         color: var(--text-color);
         font-size: 18px;
     }
+
+    /* buttons */
+    #calculate, #checkout{
+        width: 100%;
+        background-color: var(--button-color);
+        border-radius: 15px;
+    }
     
 }
