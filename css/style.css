@@ -359,4 +359,22 @@ body{
         margin-bottom: 200px;
         /* scroll-behavior: smooth; */
     }
+
+    /* modal */
+    .modal-header{
+        border: none;
+    }
+
+    .modal-body{
+        border: none;
+    }
+
+    .modal-footer{
+        border: none;
+    }
+
+    .modal-content{
+        border-radius: 40px;
+        padding: 40px;
+    }
 }
