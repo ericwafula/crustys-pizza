@@ -378,10 +378,19 @@ body{
         padding: 40px;
     }
 
-    /* header */
-    .modal-header-container{
-        display: flex;
-        align-items: row;
+    /* Modal Header */
+    .modal-header-gap{
+        display: inline-flex;
+        gap: 80px;
+    }
+
+    /* radio */
+    .radio-label{
+        color: var(--button-color);
+    }
+
+    .radio-buttons{
+        display: inline-flex;
         gap: 20px;
     }
 
@@ -393,6 +402,13 @@ body{
     #radio-form{
         display: flex;
         gap: 40px;
+    }
+
+    /* Select */
+    #select-label{
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: var(--text-color);
     }
 
     #select-crust{
@@ -411,4 +427,26 @@ body{
     #initial-price-text{
         color: var(--button-color);
     }
+
+    /* Quantity */
+    #quantity-label{
+        color: var(--button-color);
+        font-size: 24px;
+        letter-spacing: 15px;
+        font-weight: bold;
+    }
+
+    #order-type-label{
+        color: var(--text-color);
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    /* label styles */
+    .form-labels{
+        font-weight: bold;
+        color: var(--text-color);
+        font-size: 18px;
+    }
+    
 }

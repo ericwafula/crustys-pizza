@@ -1,3 +1,15 @@
+// Business Logic
+// var radioSelect = function(value){
+//     return value;
+// };
+
+// var calculateOnSize= function(value){
+//     value = radioSelect();
+//     alert(value);
+// }
+
+
+
 // UI Logic
 $(document).ready(function(){
 
@@ -9,7 +21,6 @@ $(document).ready(function(){
         {name: "Sausage & Kale", id: "sausage", img: "./images/sausage.png", price: 650},
         {name: "Bbq Beef", id: "bbq", img: "./images/bbq.png", price: 750}
     ];
-
 
 
     // Loops over each pizza and adds image to modal
@@ -28,9 +39,19 @@ $(document).ready(function(){
 
             $('#initial-price-text').remove();
         });
+
     });
 
+    var size = $("input:radio[name=size]:checked").val();
     
+    var crust = $("#select-crust").val();
+
+    var quantity = $("#quantity").val();
+
+    var orderType = $("#order-type").val();
+
+    
+
 
 });
 
