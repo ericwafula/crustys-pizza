@@ -398,4 +398,9 @@ body{
     #select-crust{
         border-radius: 20px;
     }
+
+    /* Pizza name */
+    #pizza-name{
+        color: var(--text-color);
+    }
 }
