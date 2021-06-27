@@ -357,5 +357,6 @@ body{
     .pizza-second-row{
         margin-top: 70px;
         margin-bottom: 200px;
+        /* scroll-behavior: smooth; */
     }
 }
