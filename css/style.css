@@ -311,5 +311,45 @@ body{
         text-align: center;
     }
 
-    
+    /* heading */
+    #select-heading{
+        font-size: 48px;
+        font-weight: bold;
+        color: var(--heading-color);
+        margin-bottom: 30px;
+    }
+
+    /* pizza cards */
+    .pizza-card{
+        box-shadow: 0px 4px 60px 10px rgba(73,108,216, 0.4);
+        padding: 20px;
+        width: 240px;
+        border-radius: 40px;
+    }
+
+    /* Pizza Name on card */
+    .card-title{
+        font-weight: bold;
+        color: var(--button-color);
+        margin-top: 20px;
+    }
+
+    /* Pizza price */
+    .card-body{
+        margin-top: -30px;
+        color: var(--text-color);
+    }
+
+    .card-body span{
+        font-weight: bold;
+    }
+
+    /* card button */
+    .card-button{
+        margin-top: -20px;
+        font-size: 24px;
+        font-weight: bold;
+        width: 100%;
+        border-radius: 20px;
+    }
 }
