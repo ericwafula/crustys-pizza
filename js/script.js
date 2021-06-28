@@ -141,7 +141,7 @@ $(document).ready(function(){
         $("#phone-summary").text(newName.phoneNumber);
         $("#address-summary").text(newName.address);
         $("#pizza-name-summary").text(pizzaName + ", " + newPizza.crust);
-        $("#quantity-summary").text(newPizza.quantity);
+        $("#quantity-summary").text(newPizza.quantity + ", " + newPizza.size);
     });
 
 });
