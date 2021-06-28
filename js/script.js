@@ -170,13 +170,19 @@ $(document).ready(function(){
             $(location).attr('href',url);
         });
 
+        if (orderType === "dine"){
+            deliveryFee = 0;
+        }else if (orderType === "delivery"){
+            deliveryFee = 250
+        }
+
         $("#order-summary").text("Order Summary");
         $("#name-summary").text(newName.fullName());
         $("#email-summary").text(newName.emailAddress);
         $("#phone-summary").text(newName.phoneNumber);
         $("#address-summary").text(newName.address);
         $("#pizza-name-summary").text(pizzaName + ", " + newPizza.crust);
-        $("#quantity-summary").text(newPizza.quantity + ", " + newPizza.size);
+        $("#quantity-summary").text(newPizza.quantity + ", " + newPizza.size + ",  Delivery Charges: " + deliveryFee);
     });
 
 });
