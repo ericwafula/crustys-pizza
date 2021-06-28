@@ -1,6 +1,29 @@
 // Business Logic
+// Name constructor
+function Contact(first, last, phone, email){
+    this.firstName = first;
+    this.lastName = last;
+    this.phoneNumber = phone;
+    this.emailAddress = email;
+    this.address = [];
+}
 
+// Name prototype
+Contact.prototype.fullName = function(){
+    return this.firstName + " " + this.lastName;
+}
 
+// pizza constructor
+function Pizza(size, quantity, crust, orderType){
+    this.size = size;
+    this.quantity = quantity;
+    this.crust = crust;
+    this.orderType = orderType;
+}
+
+Pizza.prototype.total = function(price){
+    return price * this.quantity;
+}
 
 
 // UI Logic
@@ -15,6 +38,8 @@ $(document).ready(function(){
         {name: "Bbq Beef", id: "bbq", img: "./images/bbq.png", price: 750}
     ];
 
+    var pizzaPrice;
+
 
     // Loops over each pizza and adds image to modal
     pizzas.forEach(function(pizza){
@@ -24,6 +49,8 @@ $(document).ready(function(){
             $('#pizza-name').prepend('<h2 id=pepperoni-title>' + pizza.name + '</h2>');
 
             $('#initial-price-pre-text').append('<h2 id="initial-price-text"> Ksh. ' + pizza.price + '</h2>');
+
+            pizzaPrice = pizza.price;
         });
         $("#myModal").on('hidden.bs.modal', function(){
             $('#' + pizza.id).remove();
@@ -31,31 +58,66 @@ $(document).ready(function(){
             $('#' + pizza.id + '-title').remove();
 
             $('#initial-price-text').remove();
+
         });
 
     });
 
-    var size = $("input:radio[name=size]:checked").val();
-    
-    var crust = $("#select-crust").val();
 
-    var quantity = $("#quantity").val();
+    $("form").submit(function(event){
+        event.preventDefault();
 
-    var orderType = $("#order-type").val();
+        var size = $("input:radio[name=size]:checked").val();
+        var crust = $("#select-crust").val();
+        var quantity = $("#quantity").val();
+        var orderType = $("#order-type").val();
+        var firstName = $("#first-name").val();
+        var lastName = $("#last-name").val();
+        var emailAddress = $("#email-address").val();
+        var phoneNumber = $("#phone").val();
+        var county = $("#county").val();
+        var address = $("#address").val();
 
-    var firstName = $("#first-name").val();
+        var newName = new Contact(firstName, lastName, phoneNumber, emailAddress);
 
-    var lastName = $("#last-name").val();
+        var newPizza = new Pizza(size, quantity, crust, orderType);
 
-    var emailAddress = $("#email-address").val();
 
-    var phoneNumber = $("#phone").val();
+        if (newPizza.size === "large"){
+            if (newPizza.crust === "cryspy"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300));
+            }else if (newPizza.crust === "stuffed"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300 + 100));
+            }else if (newPizza.crust === "gluten-free"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300 + 200));
+            }
+        }else if (newPizza.size === "medium"){
+            if (newPizza.crust === "cryspy"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150));
+            }else if(newPizza.crust === "stuffed"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150 + 100));
+            }else if (newPizza.crust === "gluten-free"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150 + 150));
+            }
+        }else{
+            if (newPizza.crust === "cryspy"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice));
+            }else if(newPizza.crust === "stuffed"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 50));
+            }else if(newPizza.crust === "gluten-free"){
+                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 100));
+            }
+        }
+        
+        var url = "http://google.com";
 
-    var county = $("#county").val();
+        $("#checkout").click(function(){
+            $(location).attr('href',url);
+        });
 
-    var address = $("#address").val();
-
+    });
 
 });
 
-// Append to div of id pizza-name
+// create name, contact, address and pizza constructors
+// Cryspy, Stuffed, Gluten-free
