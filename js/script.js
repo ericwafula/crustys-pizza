@@ -109,7 +109,7 @@ $(document).ready(function(){
             }
         }
         
-        var url = "http://google.com";
+        var url = "ft-checkout.html";
 
         $("#checkout").click(function(){
             $(location).attr('href',url);

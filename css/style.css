@@ -464,4 +464,9 @@ body{
         font-weight: bold;
         color: var(--button-color);
     }
+
+    /* subheading */
+    .sub-heading{
+        letter-spacing: 1px !important;
+    }
 }
