@@ -465,11 +465,6 @@ body{
         color: var(--button-color);
     }
 
-<<<<<<< HEAD
-    /* subheading */
-    .sub-heading{
-        letter-spacing: 1px !important;
-=======
     /* output heading */
     #order-summary{
         text-align: center;
@@ -491,6 +486,5 @@ body{
 
     .title{
         display: none;
->>>>>>> dev
     }
 }
