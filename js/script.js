@@ -1,17 +1,28 @@
 // Business Logic
 // Name constructor
-function Contact(first, last, phone, email){
+function Contact(first, last, phone, email, address){
     this.firstName = first;
     this.lastName = last;
     this.phoneNumber = phone;
     this.emailAddress = email;
-    this.address = [];
+    this.address = address;
 }
 
 // Name prototype
 Contact.prototype.fullName = function(){
     return this.firstName + " " + this.lastName;
 }
+
+// // Addresses constructor
+// function Address(county, address){
+//     this.county = county;
+//     this.homeAddress = address;
+// }
+
+// // Addresses prototype
+// Address.prototype.fullAddress = function(){
+//     return this.homeAddress + ", " + this.county;
+// }
 
 // pizza constructor
 function Pizza(size, quantity, crust, orderType){
@@ -39,6 +50,7 @@ $(document).ready(function(){
     ];
 
     var pizzaPrice;
+    var pizzaName;
 
 
     // Loops over each pizza and adds image to modal
@@ -51,6 +63,7 @@ $(document).ready(function(){
             $('#initial-price-pre-text').append('<h2 id="initial-price-text"> Ksh. ' + pizza.price + '</h2>');
 
             pizzaPrice = pizza.price;
+            pizzaName = pizza.name;
         });
         $("#myModal").on('hidden.bs.modal', function(){
             $('#' + pizza.id).remove();
@@ -63,6 +76,9 @@ $(document).ready(function(){
 
     });
 
+    $("#calculate").click(function(){
+        $(".title").show();
+    });
 
     $("form").submit(function(event){
         event.preventDefault();
@@ -78,9 +94,13 @@ $(document).ready(function(){
         var county = $("#county").val();
         var address = $("#address").val();
 
-        var newName = new Contact(firstName, lastName, phoneNumber, emailAddress);
+        var newName = new Contact(firstName, lastName, phoneNumber, emailAddress, address);
 
         var newPizza = new Pizza(size, quantity, crust, orderType);
+
+        // var newAddress = new Address(county, address);
+
+        // newName.address.push(newAddress);
 
 
         if (newPizza.size === "large"){
@@ -115,6 +135,13 @@ $(document).ready(function(){
             $(location).attr('href',url);
         });
 
+        $("#order-summary").text("Order Summary");
+        $("#name-summary").text(newName.fullName());
+        $("#email-summary").text(newName.emailAddress);
+        $("#phone-summary").text(newName.phoneNumber);
+        $("#address-summary").text(newName.address);
+        $("#pizza-name-summary").text(pizzaName + ", " + newPizza.crust);
+        $("#quantity-summary").text(newPizza.quantity);
     });
 
 });
