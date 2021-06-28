@@ -98,36 +98,39 @@ $(document).ready(function(){
 
         var newPizza = new Pizza(size, quantity, crust, orderType);
 
+        var deliveryFee = 250;
+
         // var newAddress = new Address(county, address);
 
         // newName.address.push(newAddress);
 
+        // alert(newPizza.orderType);
 
-        if (newPizza.size === "large"){
-            if (newPizza.crust === "cryspy"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300));
-            }else if (newPizza.crust === "stuffed"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300 + 100));
-            }else if (newPizza.crust === "gluten-free"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300 + 200));
-            }
-        }else if (newPizza.size === "medium"){
-            if (newPizza.crust === "cryspy"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150));
-            }else if(newPizza.crust === "stuffed"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150 + 100));
-            }else if (newPizza.crust === "gluten-free"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150 + 150));
-            }
-        }else{
-            if (newPizza.crust === "cryspy"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice));
-            }else if(newPizza.crust === "stuffed"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 50));
-            }else if(newPizza.crust === "gluten-free"){
-                $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 100));
-            }
+        // Large
+        if (newPizza.size === "large" && newPizza.crust === "cryspy"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300));
+        }else if (newPizza.size === "large" && newPizza.crust === "stuffed"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300 + 100));
+        }else if (newPizza.size === "large" && newPizza.crust === "gluten-free"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 300 + 200));
         }
+        // Medium
+        if (newPizza.size === "medium" && newPizza.crust === "cryspy"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150));
+        }else if (newPizza.size === "medium" && newPizza.crust === "stuffed"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150 + 100));
+        }else if (newPizza.size === "medium" && newPizza.crust === "gluten-free"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 150 + 150));
+        }
+        // Small
+        else if (newPizza.size === "small" && newPizza.crust === "cryspy"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice));
+        }else if (newPizza.size === "small" && newPizza.crust === "stuffed"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 50));
+        }else if (newPizza.size === "small" && newPizza.crust === "gluten-free"){
+            $("#total-output").text("Total: " + newPizza.total(pizzaPrice + 100));
+        }
+
         
         var url = "ft-checkout.html";
 
