@@ -8,7 +8,7 @@ This is a pizza ordering web app that allows users to order pizza based on size,
 * cd/your/path/to/crustys-pizza/
 * code . for vscode or .atom for atom
 ## Known Bugs
-There are no known bugs
+Mobile responsiveness
 ## Technologies Used
     -HTML
     -CSS
